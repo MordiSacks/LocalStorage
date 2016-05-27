@@ -11,7 +11,7 @@ composer require mordisacks/localstorage
 Statically
 ```
 LocalStorage::set('foo', 'bar');
-LocalStorage::get('foo'); // outputs bar
+echo LocalStorage::get('foo'); // outputs bar
 ```
 Or via instance
 ```
