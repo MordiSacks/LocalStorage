@@ -1,6 +1,6 @@
 {
   "name": "mordisacks/localstorage",
-  "description": "like html5 local storage but for php in server side.",
+  "description": "like html5 local storage but for php.",
   "keywords": ["localstorage", "LocalStorage", "local storage"],
   "license": "MIT",
   "version": "1.0.0",
