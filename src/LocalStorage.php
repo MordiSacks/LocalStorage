@@ -1,11 +1,11 @@
 <?php
 
 
-namespace LocalStorage;
+namespace MordiSacks\LocalStorage;
 
 
 use Exception;
-use LocalStorage\FileSystemDrivers\DiskFileSystemDriver;
+use MordiSacks\LocalStorage\LocalStorageDrivers\DiskFileSystemDriver;
 
 /**
  * Class LocalStorage
@@ -14,7 +14,7 @@ use LocalStorage\FileSystemDrivers\DiskFileSystemDriver;
 class LocalStorage
 {
 
-	/** @var  FileSystemInterface */
+	/** @var  LocalStorageDriverInterface */
 	protected static $driver;
 
 	/** @var  LocalStorage */
@@ -23,7 +23,7 @@ class LocalStorage
 	/**
 	 * LocalStorage constructor.
 	 *
-	 * @param FileSystemInterface $driver
+	 * @param LocalStorageDriverInterface $driver
 	 *
 	 * @throws Exception
 	 */
@@ -38,13 +38,13 @@ class LocalStorage
 		{
 			static::$driver = new DiskFileSystemDriver();
 		}
-		elseif($driver instanceof FileSystemInterface)
+		elseif($driver instanceof LocalStorageDriverInterface)
 		{
 			static::$driver = $driver;
 		}
 		else
 		{
-			throw new Exception('driver must be instance of FileSystemInterface');
+			throw new Exception('driver must be instance of LocalStorageDriverInterface');
 		}
 	}
 
@@ -58,7 +58,7 @@ class LocalStorage
 	 */
 	public static function get($key, $default = null)
 	{
-		if(!(static::$driver instanceof FileSystemInterface))
+		if(!(static::$driver instanceof LocalStorageDriverInterface))
 		{
 			static::init();
 		}
@@ -74,7 +74,7 @@ class LocalStorage
 	 */
 	public static function set($key, $value)
 	{
-		if(!(static::$driver instanceof FileSystemInterface))
+		if(!(static::$driver instanceof LocalStorageDriverInterface))
 		{
 			static::init();
 		}

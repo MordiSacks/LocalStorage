@@ -1,13 +1,13 @@
 <?php
 
 
-namespace LocalStorage;
+namespace MordiSacks\LocalStorage;
 
 /**
  * Interface FileSystemInterface
  * @package LocalStorage
  */
-interface FileSystemInterface
+interface LocalStorageDriverInterface
 {
 	/**
 	 * @param string $key

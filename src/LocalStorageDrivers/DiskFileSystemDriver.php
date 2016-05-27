@@ -1,18 +1,18 @@
 <?php
 
 
-namespace LocalStorage\FileSystemDrivers;
+namespace MordiSacks\LocalStorage\LocalStorageDrivers;
 
 
 use Exception;
-use LocalStorage\FileSystemInterface;
+use MordiSacks\LocalStorage\LocalStorageDriverInterface;
 
 /**
  * Class DiskFileSystemDriver
  * Requires writing permissions
  * @package LocalStorage\FileSystemDrivers
  */
-class DiskFileSystemDriver implements FileSystemInterface
+class DiskFileSystemDriver implements LocalStorageDriverInterface
 {
 	/**
 	 * DiskFileSystemDriver constructor.
