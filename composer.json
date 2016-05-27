@@ -1,5 +1,5 @@
 {
-  "name": "mordisacks/LocalStorage",
+  "name": "mordisacks/localstorage",
   "description": "like html5 local storage but for php in server side.",
   "keywords": ["localstorage", "LocalStorage", "local storage"],
   "license": "MIT",
