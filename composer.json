@@ -3,12 +3,7 @@
   "description": "like html5 local storage but for php.",
   "keywords": ["LocalStorage", "local storage"],
   "license": "MIT",
-  "version": "1.0.2",
-  "authors": [
-    {
-      "name": "Mordi Sacks"
-    }
-  ],
+  "authors": [{"name": "Mordi Sacks"}],
   "require": {
     "php": ">=5.6.0"
   },
